@@ -15,5 +15,6 @@ To define the size of neighbor, a parameter K will be set beforehand. A larger K
 
 ## Implementation
 To dive deep into its implementation, let's consider a case where a unknown sample need to be classified in a 2-D plane.
+
 <img src="img/Screen%20Shot%202022-12-05%20at%205.46.23%20PM.png" width="500">
 
