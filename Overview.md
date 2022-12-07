@@ -60,8 +60,8 @@ We will talk about how to choose k and what kNN algotithm is in our following se
 <p>
 After choosing the k and check the number of neighbors in different groups, this new data point can be classified to diabetes group as it has more yellow point neighbors.
 
-## Clustering v.s. Classification
----
+# Clustering v.s. Classification
+
 Classification and Clustering are two common machine learning methods to categorize objects into different classes based on features. Classification deals with identifying which new categories does this new object belongs to, on the basis of known labels in a training set of data. 
 
 <br>
