@@ -191,7 +191,6 @@ On a higher dimentional space which is common in bioinformatic application, diff
   <img src="img/Screen Shot 2022-12-05 at 6.15.55 PM.png" width="300">
   <p>
     
-  > \sqrt{\sum_{i=1}^n (x_i-y_i)^2}
 
 * Manhattan distances
   
@@ -201,7 +200,7 @@ On a higher dimentional space which is common in bioinformatic application, diff
   <img src="img/Screen Shot 2022-12-05 at 6.16.02 PM.png" width="300">
   <p>
     
-  > \left(\sum_{i=1}^n |x_i-y_i|^p\right)^{1/p}
+
 
 Both metrics are intuitive and fast to compute, therefore widely used in KNN applications.
 
