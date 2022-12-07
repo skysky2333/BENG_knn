@@ -1,9 +1,10 @@
 # Overview 💻
 
 <p align="center" width="100%">
-<img src="https://user-images.githubusercontent.com/97704603/205791858-a5bfc0ca-7473-4f0a-ab87-6ee47877c7ae.png" width=60% height=60%>
+<img src="https://user-images.githubusercontent.com/97704603/205791858-a5bfc0ca-7473-4f0a-ab87-6ee47877c7ae.png" width=70% height=70%>
 <p>
-  'cite to be added'
+  
+###### Image Source Video https://www.youtube.com/watch?v=ukzFI9rgwfU&t=6s
 
 As humans, we learn from our past experiences and thus could better adjust our performances in the future. 
 The first time you have a dinner in a new restaurant, the experience you had in the restaurant would 
@@ -21,13 +22,18 @@ Machines learn from the data provided** (Wink-wink, we will talk about details o
 mining**.
   
 <p align="center" width="100%">
-<img src="https://user-images.githubusercontent.com/97704603/205791233-9f680b86-0e11-4644-8e39-b919d1d7e785.png" width=60% height=60%>
+<img src="https://user-images.githubusercontent.com/97704603/205791233-9f680b86-0e11-4644-8e39-b919d1d7e785.png" width=70% height=70%>
 <p>
-  'cite to be added'
- 
+  
+###### Image generated from https://monkeylearn.com/word-cloud/
+
+## Simple kNN Application Example in Bioinformatics
 
 <p align="center" width="100%"><img width="680" alt="Screen Shot 2022-12-06 at 5 04 40 PM" src="https://user-images.githubusercontent.com/97704603/206062418-ad414215-c374-4811-b945-fa29100c191f.png"><p>
-  
+
+
 [Click me to watch videos👉👈](https://youtu.be/5nogFDZDz_k)
+
+
   
 
