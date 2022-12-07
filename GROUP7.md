@@ -1,4 +1,4 @@
-# Table of contents
+# Table of contents <a name="tob"></a >
 - [Overview](#overview)
 - [Simple kNN Application Example in Bioinformatics](#kNN)
 - [Clustering v.s. Classification](#3)
@@ -11,9 +11,8 @@
 - [Summary](#5)
 
 
-
-
 # Overview 💻 <a name="overview"></a >
+[BACK TO TABLE OF CONTENTS](#tob)
 
 <p align="center" width="100%">
 <img src="https://user-images.githubusercontent.com/97704603/205791858-a5bfc0ca-7473-4f0a-ab87-6ee47877c7ae.png" width=70% height=70%>
@@ -46,6 +45,7 @@ mining**.
 ---
   
 # Simple kNN Application Example in Bioinformatics <a name="kNN"></a >
+[BACK TO TABLE OF CONTENTS](#tob)
   
 We created animation video we created to simply illustrate how we can implement kNN algorithm to classify Diabetic Patient given age and BMI =)
 <p align="center" width="100%"><img width="680" alt="Screen Shot 2022-12-06 at 5 04 40 PM" src="https://user-images.githubusercontent.com/97704603/206062418-ad414215-c374-4811-b945-fa29100c191f.png"><p>
@@ -84,6 +84,7 @@ After choosing the k and check the number of neighbors in different groups, this
 ---
   
 # Clustering v.s. Classification <a name="3"></a >
+[BACK TO TABLE OF CONTENTS](#tob)
 
 Classification and Clustering are two common machine learning methods to categorize objects into different classes based on features. Classification deals with identifying which new categories does this new object belongs to, on the basis of known labels in a training set of data. 
 
@@ -143,10 +144,13 @@ More difference between classification and clustering can be found in this table
 
 
 # Machine learning - K-nearest-neighbors classification (KNN) <a name="4"></a >
+[BACK TO TABLE OF CONTENTS](#tob)
   
 KNN is a simple yet effective machine learning classification approaches. This section will explain the details behind K neariest neighbors algorithm.
 
 ## Intuition <a name="4.1"></a >
+[BACK TO TABLE OF CONTENTS](#tob)
+  
 > You are who you surround yourself with.
 > -- <cite>Jennifer Fedinec</cite>
 > 
@@ -155,6 +159,8 @@ This is the idea behind KNN algorithm. In the N-dimentional database, given a ne
 To define the size of neighbor, a parameter K will be set beforehand. A larger K will considers more neighbor, while a smaller K will consider less / closer neighbors.
 
 ## Implementation <a name="4.2"></a >
+[BACK TO TABLE OF CONTENTS](#tob)
+  
 To dive deep into its implementation, let's consider a case where a unknown sample need to be classified in a 2-D plane.
 
 <p align="center">
@@ -181,6 +187,8 @@ After getting these data, the model will classify the new datapoint to be the ma
 
 
 ## Distance metrics <a name="4.3"></a >
+[BACK TO TABLE OF CONTENTS](#tob)
+  
 On a higher dimentional space which is common in bioinformatic application, difference distance metrics will lead to different results and have their own advantages as well as disadvantages. Let's discuss the two most common distance measurments.
 
 * Euclidean Distance
@@ -206,11 +214,15 @@ Both metrics are intuitive and fast to compute, therefore widely used in KNN app
 
 
 ## Normalization <a name="4.4"></a >
+[BACK TO TABLE OF CONTENTS](#tob)
+    
 Because large values in some dimentions will overpower and skew the algorithm to ignore dimentions of smaller values, which may inclose important informations, we need a way to standardize all datapoints across all dimentions. This is where normalization comes in.
 
 One simple normalization stratigy is to rescale all features within range 0-1.
 
 ## Importance of K <a name="4.5"></a >
+[BACK TO TABLE OF CONTENTS](#tob)
+    
 The only and most curcial hyperparameter to tune for KNN is k.
 
 <p align="center">
@@ -226,6 +238,7 @@ A small k will overfit and model and create inaccurate bondaries. A large k will
 
   
 # Summary <a name="5"></a >
+[BACK TO TABLE OF CONTENTS](#tob)
 
 
 Machine learning algorithms in bioinformatics can be used for prediction, classification, and feature selection. Machine learning has many applications such as in biology and bioinformatics. For instance, Artificial neural networks in bioinformatics have been used for:
