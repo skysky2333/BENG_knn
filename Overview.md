@@ -1,10 +1,25 @@
-# Overview 💻
+# Table of contents
+- [Overview](#overview)
+- [Simple kNN Application Example in Bioinformatics](#kNN)
+- [Clustering v.s. Classification](#3)
+- [K-nearest-neighbors classification (KNN)](#4)
+  - [Intuition](#4.1)
+  - [Implementation](#4.2)
+  - [Distance metrics](#4.3)
+  - [Normalization](#4.4)
+  - [Importance of K](#4.5)
+- [Summary](#5)
+
+
+
+
+# Overview 💻 <a name="overview"></a >
 
 <p align="center" width="100%">
 <img src="https://user-images.githubusercontent.com/97704603/205791858-a5bfc0ca-7473-4f0a-ab87-6ee47877c7ae.png" width=70% height=70%>
 <p>
   
-###### Image Source Video https://www.youtube.com/watch?v=ukzFI9rgwfU&t=6s
+###### From https://www.youtube.com/watch?v=ukzFI9rgwfU&t=6s
 
 As humans, we learn from our past experiences and thus could better adjust our performances in the future. 
 The first time you have a dinner in a new restaurant, the experience you had in the restaurant would 
@@ -25,9 +40,13 @@ mining**.
 <img src="https://user-images.githubusercontent.com/97704603/205791233-9f680b86-0e11-4644-8e39-b919d1d7e785.png" width=70% height=70%>
 <p>
   
-###### Image generated from https://monkeylearn.com/word-cloud/
-
-## Simple kNN Application Example in Bioinformatics
+###### Generated from https://monkeylearn.com/word-cloud/
+  <br>
+  
+---
+  
+# Simple kNN Application Example in Bioinformatics <a name="kNN"></a >
+  
 We created animation video we created to simply illustrate how we can implement kNN algorithm to classify Diabetic Patient given age and BMI =)
 <p align="center" width="100%"><img width="680" alt="Screen Shot 2022-12-06 at 5 04 40 PM" src="https://user-images.githubusercontent.com/97704603/206062418-ad414215-c374-4811-b945-fa29100c191f.png"><p>
 
@@ -60,7 +79,11 @@ We will talk about how to choose k and what kNN algotithm is in our following se
 <p>
 After choosing the k and check the number of neighbors in different groups, this new data point can be classified to diabetes group as it has more yellow point neighbors.
 
-# Clustering v.s. Classification
+  <br>
+  
+---
+  
+# Clustering v.s. Classification <a name="3"></a >
 
 Classification and Clustering are two common machine learning methods to categorize objects into different classes based on features. Classification deals with identifying which new categories does this new object belongs to, on the basis of known labels in a training set of data. 
 
@@ -114,11 +137,96 @@ More difference between classification and clustering can be found in this table
 |More complex| Less complex|
 |Examples algorithms: Logistic regression, Naive Bayes classifier, Support vector machines, etc.|Examples algorithms: k-means clustering algorithm, Fuzzy c-means clustering algorithm, Gaussian (EM) clustering algorithm, etc.|
 
+  <br>
+  
 ---
 
-<br>
 
-## Summary
+# Machine learning - K-nearest-neighbors classification (KNN) <a name="4"></a >
+  
+KNN is a simple yet effective machine learning classification approaches. This section will explain the details behind K neariest neighbors algorithm.
+
+## Intuition <a name="4.1"></a >
+> You are who you surround yourself with.
+> -- <cite>Jennifer Fedinec</cite>
+> 
+This is the idea behind KNN algorithm. In the N-dimentional database, given a new datapoints, the KNN will looks at its neighbor to determine its classification. For example, if the majority of its neighbors belongs to class A, the new datapoint will be classified as class A.
+
+To define the size of neighbor, a parameter K will be set beforehand. A larger K will considers more neighbor, while a smaller K will consider less / closer neighbors.
+
+## Implementation <a name="4.2"></a >
+To dive deep into its implementation, let's consider a case where a unknown sample need to be classified in a 2-D plane.
+
+<p align="center">
+<img src="img/Screen%20Shot%202022-12-05%20at%205.46.23%20PM.png" width="500">
+<p>
+
+###### From https://www.ibm.com/topics/knn
+
+Here, we see neighbors of both classes surrounding the new example. Let's first define the K for the algorithm to start working.
+
+1. Take in user input to define the parameter k to be 3.
+
+Next, the model will look at the 3 nearest neighbor.
+
+2. The model checks out the 3 neighbors, and get 1 class A and 2 class B data points.
+
+<p align="center">
+<img src="img/Screen Shot 2022-12-05 at 5.59.17 PM.png" width="500">
+<p>
+  
+After getting these data, the model will classify the new datapoint to be the majory class of its neighbors.
+
+3. Because there are more class B than class A neighbors, the new datapoints is classified as class B.
+
+
+## Distance metrics <a name="4.3"></a >
+On a higher dimentional space which is common in bioinformatic application, difference distance metrics will lead to different results and have their own advantages as well as disadvantages. Let's discuss the two most common distance measurments.
+
+* Euclidean Distance
+
+  The Euclidean distance measure distance in Euclidean space based on Pythagoras' theorem. It is calculated by taking the square root of the sum of the squared pair-wise distances on all dimensions.
+  
+  <p align="center">
+  <img src="img/Screen Shot 2022-12-05 at 6.15.55 PM.png" width="300">
+  <p>
+    
+  > \sqrt{\sum_{i=1}^n (x_i-y_i)^2}
+
+* Manhattan distances
+  
+  Instead of calculating the shortest direct path between two points, Manhattan distance calculates the distance based on gridlines.
+
+  <p align="center">
+  <img src="img/Screen Shot 2022-12-05 at 6.16.02 PM.png" width="300">
+  <p>
+    
+  > \left(\sum_{i=1}^n |x_i-y_i|^p\right)^{1/p}
+
+Both metrics are intuitive and fast to compute, therefore widely used in KNN applications.
+
+
+## Normalization <a name="4.4"></a >
+Because large values in some dimentions will overpower and skew the algorithm to ignore dimentions of smaller values, which may inclose important informations, we need a way to standardize all datapoints across all dimentions. This is where normalization comes in.
+
+One simple normalization stratigy is to rescale all features within range 0-1.
+
+## Importance of K <a name="4.5"></a >
+The only and most curcial hyperparameter to tune for KNN is k.
+
+<p align="center">
+<img src="img/Screen Shot 2022-12-05 at 6.27.31 PM.png" width="1000">
+<p>
+  
+A small k will overfit and model and create inaccurate bondaries. A large k will under fit the model and create overly-generalized bondaries. So a common stragies is to try multiple iteration of k and choose the best performing one. This is possible because of the low computational cost of KNN.
+
+  <br>
+  
+---
+
+
+  
+# Summary <a name="5"></a >
 
 
 Machine learning algorithms in bioinformatics can be used for prediction, classification, and feature selection. Machine learning has many applications such as in biology and bioinformatics. For instance, Artificial neural networks in bioinformatics have been used for:
