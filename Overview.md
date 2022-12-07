@@ -28,12 +28,37 @@ mining**.
 ###### Image generated from https://monkeylearn.com/word-cloud/
 
 ## Simple kNN Application Example in Bioinformatics
-
+We created animation video we created to simply illustrate how we can implement kNN algorithm to classify Diabetic Patient given age and BMI =)
 <p align="center" width="100%"><img width="680" alt="Screen Shot 2022-12-06 at 5 04 40 PM" src="https://user-images.githubusercontent.com/97704603/206062418-ad414215-c374-4811-b945-fa29100c191f.png"><p>
 
 
 [Click me to watch videos👉👈](https://youtu.be/5nogFDZDz_k)
 
+<p align="center">
+<img width="680" alt="1" src="https://user-images.githubusercontent.com/97704603/206064649-162bd391-fd11-41b2-bc8e-b38c6694241d.png">
+<p>
+As you may learn in the following sections, for supervised learning algorithm (classification), we need to have a training dataset before we want to classify the new datapoint. Here is a group of people that we will record their BMI and ages for training dataset generation. (SUPER SIMPLE DATASET)
+
+<p align="center">
+<img width="680" alt="2" src="https://user-images.githubusercontent.com/97704603/206064653-d18740b9-0895-49f8-805a-831f1e386d53.png">
+<p>
+Healthy patients will be marked as pink points on the graph, while diabetic patients will be marked as yellow points.  
+
+<p align="center">
+<img width="680" alt="3" src="https://user-images.githubusercontent.com/97704603/206064656-3380a833-f5f4-4feb-81af-02e470ae5e18.png">
+<p>
+After the machine is given the training dataset, it will be given a new data point, which is needed to be classified. Here, the new data point is a middle-age male with BMI in overweight range.
+  
+<p align="center">
+  <img width="680" alt="4" src="https://user-images.githubusercontent.com/97704603/206064659-cb1effe9-f98b-400a-911d-fbac4630969d.png">
+<p>
+kNN algorithms(k Nearest Neighbors Algorithm) can be implemented to classify this new data point. k is a user-defined number of neighbors.
+We will talk about how to choose k and what kNN algotithm is in our following section.
+
+<p align="center"> 
+  <img width="680" alt="6" src="https://user-images.githubusercontent.com/97704603/206064660-1f62aa34-0001-4662-a23d-0d5aaf45690e.png">
+<p>
+After choosing the k and check the number of neighbors in different groups, this new data point can be classified to diabetes group as it has more yellow point neighbors.
 
   
 
